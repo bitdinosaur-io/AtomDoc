@@ -31,7 +31,7 @@
 | tos       | Array   | outputs infos                       
 
 ```c
-curl 'http://url/event/mint'
+curl 'https://api.atomscan.org/v1/event/mint'
 ```
 ```json
 {
@@ -97,7 +97,7 @@ curl 'http://url/event/mint'
 | utc              | String   | UTC Time                     |
 
 ```c
-curl 'http://url/block/818080'
+curl 'https://api.atomscan.org/v1/block/818080'
 ```
 ```json
 {
@@ -143,7 +143,7 @@ curl 'http://url/block/818080'
 | nft_type        | String | type of the NFT                 |
 
 ```c
-curl 'http://url/atomical/0'
+curl 'https://api.atomscan.org/v1/atomical/0'
 ```
 ```json
 {
@@ -195,7 +195,7 @@ curl 'http://url/atomical/0'
 | atomical_no  | Integer    | atomical number     |
 
 ```c
-curl 'http://url/holder/bc1p3eze9y3krkxk848t0ph4d0y4mml22ht3z7g5snr8npdecrfkmuzsm433rk/0'
+curl 'https://api.atomscan.org/v1/holder/bc1p3eze9y3krkxk848t0ph4d0y4mml22ht3z7g5snr8npdecrfkmuzsm433rk/0'
 ```
 ```json
 {
