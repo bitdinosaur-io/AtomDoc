@@ -29,7 +29,9 @@ const config: DocsThemeConfig = {
         <meta name="apple-mobile-web-app-title" content="Atomscan Doc" />
         <meta name="description" content="Welcome to the Atomscan APIs documentation 🚀." />
         <title>{title}</title>
-        <meta property="og:title" content={title} />
+        <meta name="og:title" content={title} />
+        <meta name="og:description" content="Welcome to the Atomscan APIs documentation 🚀." />
+
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content="Welcome to the Atomscan APIs documentation 🚀." />
 
