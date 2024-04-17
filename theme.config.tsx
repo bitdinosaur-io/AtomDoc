@@ -20,21 +20,22 @@ const config: DocsThemeConfig = {
   logoLink: "https://atomscan.org",
   head: function useHead() {
     const { title: pageTitle } = useConfig();
-    const title = `${pageTitle} – doc.atomscan.org`;
+    const title = `${pageTitle}`;  
 
     return (
       <>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Language" content="en" />
         <meta name="apple-mobile-web-app-title" content="Atomscan Doc" />
+        <meta name="description" content="Welcome to the Atomscan APIs documentation 🚀.">
         <title>{title}</title>
-
+        <meta property="og:title" content= {title} >
         {["description", "og:description", "twitter:description"].map(
           (property) => (
             <meta
               key={property}
               name={property}
-              content={"Atomscan api documentation site"}
+              content={"Welcome to the Atomscan APIs documentation 🚀."}
             />
           )
         )}
@@ -52,7 +53,7 @@ const config: DocsThemeConfig = {
   },
   useNextSeoProps() {
     return {
-      titleTemplate: "%s – Atomscan Doc",
+      titleTemplate: "%s | Atomscan Doc| Atomscan (Atomicals Blockchain Explorer)",
     };
   },
   docsRepositoryBase: "https://atomscan.org",
