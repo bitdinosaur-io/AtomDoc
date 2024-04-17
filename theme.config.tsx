@@ -20,16 +20,16 @@ const config: DocsThemeConfig = {
   logoLink: "https://atomscan.org",
   head: function useHead() {
     const { title: pageTitle } = useConfig();
-    const title = `${pageTitle}`;  
+    const title = `${pageTitle} | Atomscan Doc| Atomscan (Atomicals Blockchain Explorer)`;
 
     return (
       <>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Language" content="en" />
         <meta name="apple-mobile-web-app-title" content="Atomscan Doc" />
-        <meta name="description" content="Welcome to the Atomscan APIs documentation 🚀.">
+        <meta name="description" content="Welcome to the Atomscan APIs documentation 🚀." />
         <title>{title}</title>
-        <meta property="og:title" content= {title} >
+        <meta property="og:title" content={title} />
         {["description", "og:description", "twitter:description"].map(
           (property) => (
             <meta
