@@ -30,6 +30,9 @@ const config: DocsThemeConfig = {
         <meta name="description" content="Welcome to the Atomscan APIs documentation 🚀." />
         <title>{title}</title>
         <meta property="og:title" content={title} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content="Welcome to the Atomscan APIs documentation 🚀." />
+
         {["description", "og:description", "twitter:description"].map(
           (property) => (
             <meta
