@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @layer base {
+  html,
+  body {
+    @apply nx-font-chillax antialiased;
+  }
+} */
+
+.nextra-container .nextra-sidebar ul li.active > a {
+  color: #fff7ba !important;
+  background: #f7df1e1c !important;
+}
