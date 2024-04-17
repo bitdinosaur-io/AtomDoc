@@ -1,6 +1,7 @@
 {
-  "index": "Home",
-  "apis": "API",
+  "index": "Introduction",
+  "getstart": "Getting Started",
+  "api-endpoints": "API Endpoints",
   "contact": {
     "title": "Contact ↗",
     "type": "page",

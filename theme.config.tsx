@@ -1,21 +1,15 @@
 import React from "react";
-import { DocsThemeConfig } from "nextra-theme-docs";
+import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 import Logowhite from "./asset/imgs/logo-white.png";
 import Image from "next/image";
 import Logo from "./components/logo";
+import Link from "next/link";
 
 const config: DocsThemeConfig = {
   // editLink:null,
   logo: () => {
     return (
-      <div className=" nx-w-full nx-h-full nx-flex nx-items-center">
-        {/* <Image
-          src={Logowhite}
-          alt="LogoPic"
-          width={100}
-          height={100}
-          className="nx-h-12"
-        /> */}
+      <div className="nx-w-full nx-h-full nx-flex nx-items-center">
         <Logo height={24} />
         <span className="nx-mx-2 nx-font-bold nx-hidden nx-text-indigo-600 md:nx-inline nx-select-none">
           Atomscan
@@ -23,12 +17,45 @@ const config: DocsThemeConfig = {
       </div>
     );
   },
+  logoLink: "https://atomscan.org",
+  head: function useHead() {
+    const { title: pageTitle } = useConfig();
+    const title = `${pageTitle} – doc.atomscan.org`;
+
+    return (
+      <>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Language" content="en" />
+        <meta name="apple-mobile-web-app-title" content="Atomscan Doc" />
+        <title>{title}</title>
+
+        {["description", "og:description", "twitter:description"].map(
+          (property) => (
+            <meta
+              key={property}
+              name={property}
+              content={"Atomscan api documentation site"}
+            />
+          )
+        )}
+
+        {/* font */}
+        {/* <link
+          rel="preload"
+          href="./asset/fonts/Chillax-Variable.ttf"
+          as="font"
+          crossOrigin=""
+          type="font/ttf"
+        /> */}
+      </>
+    );
+  },
   useNextSeoProps() {
     return {
-      titleTemplate: "%s – Atomscan API Doc",
+      titleTemplate: "%s – Atomscan Doc",
     };
   },
-  // docsRepositoryBase: "https://github.com//",
+  docsRepositoryBase: "https://atomscan.org",
   footer: {
     text: "©2022-2024 Bitdinosaur",
   },
