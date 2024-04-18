@@ -23,7 +23,7 @@ curl 'https://api.atomscan.org/v1/block/818080/info'
 | market    | String/null  | market label of the transaction 
 | tx_index  | Integer | transaction index               
 | txid      | String  | transaction hash                  
-| utc       | String  | UTC time of the transaction
+| utc_time  | String  | UTC time of the transaction
 | froms     | Array/null   | inputs information of the transaction
 | tos       | Array/null   | outputs information of the transaction
 
@@ -40,7 +40,7 @@ curl 'https://api.atomscan.org/v1/block/818080/info'
             "total_size": 2.08,
             "total_vsize": 1.16,
             "transactions": 1,
-            "utc": "2023-11-23 08:01:47"
+            "utc_time": "2023-11-23 08:01:47"
         }
     ],
     "error": "",
@@ -71,15 +71,15 @@ curl 'https://api.atomscan.org/v1/block/828080/activity?event=mint&arc20=atomica
 | -------|:--------:|:-----------:|
 | block     | Integer | block height of the transaction                
 | cost      | Float/null   | cost of the market transaction    
-| events    | Array   | events of the transaction       
+| event     | Array   | event of the transaction       
 | fee       | Integer | fee for the transaction         
 | hand_fee  | Integer/null | hand fee of the market transaction    
 | market    | String/null  | market label of the transaction 
 | tx_index  | Integer | transaction index               
 | txid      | String  | transaction hash                  
-| utc       | String  | UTC time of the transaction
-| froms     | Array/null   | inputs information of the transaction
-| tos       | Array/null   | outputs information of the transaction
+| utc_time  | String  | UTC time of the transaction
+| from      | Array/null   | input information of the transaction
+| to        | Array/null   | output information of the transaction
 
 ```json
 {
@@ -87,14 +87,14 @@ curl 'https://api.atomscan.org/v1/block/828080/activity?event=mint&arc20=atomica
         {
             "block": 828080,
             "cost": null,
-            "events": [
+            "event": [
                 "Mint"
             ],
             "fee": 3889,
-            "froms": null,
+            "from": null,
             "hand_fee": 0,
             "market": null,
-            "tos": [
+            "to": [
                 {
                     "address": "bc1p6v5lxszpv0rsyt8umjac03tjmnkk4uxrptrhavsh7sc3mxwx702q3yvv58",
                     "amount": 1000,
@@ -112,7 +112,7 @@ curl 'https://api.atomscan.org/v1/block/828080/activity?event=mint&arc20=atomica
             ],
             "tx_index": 5,
             "txid": "cd015613ccff8795bc6ca1f9b8c6e050c46ba0895945605247d6059d3ed162e9",
-            "utc": "2024-01-30 06:24:26"
+            "utc_time": "2024-01-30 06:24:26"
         },
         ...
     ],
