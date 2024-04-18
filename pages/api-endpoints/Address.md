@@ -93,15 +93,15 @@ curl 'https://api.atomscan.org/v1/address/bc1pdn63sj7vv2gtdemyz90zjwkcw0s5r7z85m
 | -------|:--------:|:-----------:|
 | block     | Integer | block height of the transaction                
 | cost      | Float/null   | cost of the market transaction    
-| events    | Array   | events of the transaction       
+| event     | Array   | event of the transaction       
 | fee       | Integer | fee for the transaction         
 | hand_fee  | Integer/null | hand fee of the market transaction    
 | market    | String/null  | market label of the transaction 
 | tx_index  | Integer | transaction index               
 | txid      | String  | transaction hash                  
-| utc       | String  | UTC time of the transaction
-| froms     | Array/null   | inputs information of the transaction
-| tos       | Array/null   | outputs information of the transaction
+| utc_time  | String  | UTC time of the transaction
+| from      | Array/null   | input information of the transaction
+| to        | Array/null   | output information of the transaction
 
 ```json
 {
@@ -109,14 +109,14 @@ curl 'https://api.atomscan.org/v1/address/bc1pdn63sj7vv2gtdemyz90zjwkcw0s5r7z85m
         {
             "block": 808619,
             "cost": null,
-            "events": [
+            "event": [
                 "Mint"
             ],
             "fee": 7620,
-            "froms": null,
+            "from": null,
             "hand_fee": 0,
             "market": null,
-            "tos": [
+            "to": [
                 {
                     "address": "bc1pdn63sj7vv2gtdemyz90zjwkcw0s5r7z85mlw800crghztw4a9j6s57h5a8",
                     "amount": 1000,
@@ -134,7 +134,7 @@ curl 'https://api.atomscan.org/v1/address/bc1pdn63sj7vv2gtdemyz90zjwkcw0s5r7z85m
             ],
             "tx_index": 1242,
             "txid": "c4f6d2f3a91011de64d349267936ae9fd874739cc1bfc6674f85cff14cf93b02",
-            "utc": "2023-09-20 19:09:02"
+            "utc_time": "2023-09-20 19:09:02"
         },
         ...
     ],
